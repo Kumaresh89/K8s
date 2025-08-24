@@ -36,6 +36,8 @@ spec:
 kubectl replace --force -f nginx.yaml - to delete and re-create new pod instantly.
 kubectl get pods --watch - this will continue to watch the status of the pod.
 kubectl get pods -o wide - this gives the complete details of the pod.
+kubectl get pod --selector app=App1 - This will select the pod with the selector app=App1
+
 
 
 
