@@ -33,6 +33,7 @@ spec:
   - name: nginx-container
     image: nginx
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-kubectl replace --force -f nginx.yaml - to delete and create new pod instantly
+kubectl replace --force -f nginx.yaml - to delete and re-create new pod instantly
+
 
 
