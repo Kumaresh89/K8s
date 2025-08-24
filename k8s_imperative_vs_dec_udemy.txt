@@ -1,0 +1,36 @@
+Impeartive commands:
+
+Create objects:
+kubectl run --image=nginx nginx - to create a pod
+kubectl create deployment --image=nginx nginx - to create a deployment from image nginx
+kubectl expose deployment nginx --port 80 - to expose the deployment nginx at port 80
+
+Update Objects:
+kubectl edit deployment nginx - to edit the deployment file 
+kubectl scale deployment nginx --replicas=5 - to scale the replica set
+kubectl set image deployment nginx nginx=nginx:1.18 - to update the image version of nginx
+kubectl create -f nginx.yaml - to create yaml file 
+kubectl replace -f nginx.yaml - to edit/replace yaml file 
+kubectl delete -f nginx.yaml - to delete the yaml file
+
+
+Declarative commands
+
+kubectl apply -f nginx.yaml
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Structure of a yaml file in k8s
+
+apiVersion: v1
+kind: Pod
+
+metadata: 
+ name: mypod
+ labels
+    app: myapp
+	type: front-end
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
